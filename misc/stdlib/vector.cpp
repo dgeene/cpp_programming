@@ -15,4 +15,9 @@ int main()
     getline(std::cin, input);
     std::cout << "You entered: " << input << std::endl;
 
+    for (unsigned int i = 0; i < input.length(); i++) {
+        char c = input[i];
+        printf("%c\n", c);
+    }
+
 }
