@@ -6,7 +6,7 @@
 
 int main()
 {
-    std::vector<int> letters;
+    std::vector<char> letters;
     std::string input = "";
 
     std::cout << "--Storing letters in a vector--\n";
@@ -15,9 +15,13 @@ int main()
     getline(std::cin, input);
     std::cout << "You entered: " << input << std::endl;
 
+    // iterate through string
     for (unsigned int i = 0; i < input.length(); i++) {
         char c = input[i];
-        printf("%c\n", c);
+        letters.push_back(c);
+        //printf("%c\n", c);
     }
+
+    printf("The vector is %lu in length\n", letters.size());
 
 }
