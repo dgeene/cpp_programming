@@ -14,9 +14,19 @@ Date::Date() {
 
 Date::Date(int month, int day, int year) {
     // TODO do validation
-    mMonth = month;
+    if (month < 1 || month > 12) {
+        mMonth = 1;
+    } else {
+        mMonth = month;
+    }
+
+    if (year < 1900) {
+        mYear = 1900;
+    } else {
+        mYear = year;
+    }
+
     mDay = day;
-    mYear = year;
 }
 
 /*
