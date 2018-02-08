@@ -1,7 +1,7 @@
 class Date
 {
     private:
-        int month, day, year;
+        int mMonth, mDay, mYear;
     public:
         Date();
         void print();
