@@ -12,6 +12,13 @@ Date::Date() {
     mYear = 2000;
 }
 
+Date::Date(int month, int day, int year) {
+    // TODO do validation
+    mMonth = month;
+    mDay = day;
+    mYear = year;
+}
+
 /*
  * Prints the date to stdout in the form mm/dd/yyyy
  */
