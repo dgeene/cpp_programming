@@ -29,11 +29,11 @@ int main()
     d1.printLong();     // prints 1 January 2000
     cout << endl;
     d2.print();         // prints 07/04/1976
-    //d2.printLong();     // prints 4 July 1976
+    d2.printLong();     // prints 4 July 1976
     cout << endl;
 
     d3.print();         // prints 01/15/1900
-//    d3.printLong();     // prints 15 January 1900
+    d3.printLong();     // prints 15 January 1900
     cout << endl;
     cout << "object d2's day is " << d2.getDay() << endl;
     cout << "object d2's month is "  << d2.getMonth() << " which is " << d2.getMonthName() << endl;

@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Assignment 1
+ */
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -13,7 +18,6 @@ Date::Date() {
 }
 
 Date::Date(int month, int day, int year) {
-    // TODO do validation
     if (month < 1 || month > 12) {
         mMonth = 1;
     } else {
@@ -26,9 +30,17 @@ Date::Date(int month, int day, int year) {
         mYear = year;
     }
 
-    mDay = day;
+    if (isValidDayOfMonth(day)) {
+        mDay = day;
+    } else {
+        mDay = 1;
+    }
+
 }
 
+/*
+ * Returns the name of the month
+ */
 const char *Date::getMonthName() {
     const char *name;
 
@@ -70,11 +82,46 @@ const char *Date::getMonthName() {
             name = "December";
             break;
         default:
-            name = "Unknown Month!";
+            name = "Invalid Month!";
             break;
     }
 
     return name;
+}
+
+/*
+ * Validates that the day we enter for the given month is correct
+ */
+bool Date::isValidDayOfMonth(int day) {
+    bool isValid = true;
+
+    // obviously we cant have a day number less than 1
+    if (day < 1) {
+        return isValid = false;
+    }
+
+    switch(day) {
+        case 2: // assume february always has 28 days
+            if (day > 28) {
+                isValid = false;
+            }
+            break;
+        case 4: // months with 30 days
+        case 6:
+        case 9:
+        case 11:
+            if (day > 30) {
+                isValid = false;
+            }
+            break;
+        default: // every other month has 31 days
+            if (day > 31) {
+                isValid = false;
+            }
+            break;
+    }
+
+    return isValid;
 }
 
 /*
@@ -91,5 +138,5 @@ void Date::print() {
  * Prints the date in long format February 2, 2018
  */
 void Date::printLong() {
-    cout << "printlong" << endl;
+    cout << mDay << " " << getMonthName() << " " << mYear << endl;
 }
