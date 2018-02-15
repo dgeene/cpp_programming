@@ -7,6 +7,6 @@ class QueueItem {
         const char* getData() const;
     private:
         char _data[30]; // data value (null temrinated character string)
-        const int _itemId; // unique id for item in queue
+        int _itemId; // unique id for item in queue //TODO this needs to be a const
         QueueItem* _pNext; // next item in queue
 };

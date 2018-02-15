@@ -1,3 +1,5 @@
+#include "QueueItem.h"
+
 class Queue {
     public:
         Queue();
