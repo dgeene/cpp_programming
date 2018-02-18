@@ -23,6 +23,22 @@ void Queue::addItem(const char *pData) {
 }
 
 /*
+ * Remove a single item from the head of the queue
+ */
+void Queue::removeItem() {
+    if (_pHead != 0) {
+        QueueItem *nextItem = _pHead->getNext();
+        delete _pHead;
+        if (nextItem != 0) {
+            _pHead = nextItem;
+        } else {
+            _pHead = _pTail = 0;
+            std::cout << "list now empty" << std::endl;
+        }
+    }
+}
+
+/*
  * Prints the queue to std out. includes the queue id and data
  */
 void Queue::print() {
