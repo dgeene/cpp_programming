@@ -13,6 +13,16 @@ int main() {
     myQueue.addItem("orange");
     myQueue.print();
     myQueue.removeItem();
+    myQueue.removeItem();
+    myQueue.addItem("banana");
+    myQueue.addItem("pear");
+    myQueue.addItem("grapes");
+    myQueue.addItem("pomegranite");
+    myQueue.print();
+    myQueue.removeItem();
+    myQueue.removeItem();
+    myQueue.removeItem();
+    myQueue.removeItem();
     myQueue.print();
 
     return 0;
