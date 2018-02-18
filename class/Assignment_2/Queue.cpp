@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Assignment 2
+ */
 #include <iostream>
 #include "Queue.h"
 
@@ -7,8 +12,12 @@ Queue::Queue() {
 }
 
 Queue::~Queue() {
+    erase();
 }
 
+/*
+ * Adds an item to the tail end of the queue
+ */
 void Queue::addItem(const char *pData) {
     QueueItem *pItem = new QueueItem(pData, ++_itemCounter);
 
@@ -24,6 +33,7 @@ void Queue::addItem(const char *pData) {
 
 /*
  * Remove a single item from the head of the queue
+ * When the items have all been erased it will nullify the head and tail
  */
 void Queue::removeItem() {
     if (_pHead != 0) {
@@ -33,8 +43,17 @@ void Queue::removeItem() {
             _pHead = nextItem;
         } else {
             _pHead = _pTail = 0;
-            std::cout << "list now empty" << std::endl;
         }
+    }
+}
+
+/*
+ * Clears the queue and frees memory
+ */
+void Queue::erase() {
+    std::cout << "----------Erasing the Queue----------" << std::endl;
+    while (_pTail != 0) {
+        removeItem();
     }
 }
 
@@ -42,7 +61,7 @@ void Queue::removeItem() {
  * Prints the queue to std out. includes the queue id and data
  */
 void Queue::print() {
-    std::cout << "---------Printing the Queue----------" << std::endl;
+    std::cout << "++++++++++Printing the Queue++++++++++" << std::endl;
 
     if (_pHead != 0) {
         QueueItem *curItem = _pHead;

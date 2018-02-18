@@ -1,8 +1,12 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Assignment 2
+ */
 #include "QueueItem.h"
 #include <cstring>
 
 QueueItem::QueueItem(const char *pData, int id) {
-    //_data = *pData;
     std::strcpy(_data, pData);
     _itemId = id;
     _pNext = 0;

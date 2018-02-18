@@ -1,4 +1,9 @@
 #include <iostream>
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Assignment 2
+ */
 #include "Queue.h"
 
 using namespace std;
@@ -24,6 +29,14 @@ int main() {
     myQueue.removeItem();
     myQueue.removeItem();
     myQueue.print();
+    myQueue.erase();
+    myQueue.addItem("soccer");
+    myQueue.addItem("gymnastics");
+    myQueue.addItem("skiing");
+    myQueue.print();
+    myQueue.erase();
+    myQueue.print();
+        
 
     return 0;
 }
