@@ -6,6 +6,10 @@ using namespace std;
 int main() {
     Queue myQueue;
 
-    cout << "hello" <<endl;
+    //myQueue.removeItem();
+    myQueue.addItem("red");
+    myQueue.addItem("blue");
+    myQueue.print();
+
     return 0;
 }

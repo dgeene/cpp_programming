@@ -5,6 +5,7 @@ QueueItem::QueueItem(const char *pData, int id) {
     //_data = *pData;
     std::strcpy(_data, pData);
     _itemId = id;
+    _pNext = 0;
 }
 
 void QueueItem::setNext(QueueItem *pItem) {
