@@ -23,7 +23,7 @@ void Queue::addItem(const char *pData) {
 }
 
 /*
- * Prints the qeueu to std out. includes the queue id and data
+ * Prints the queue to std out. includes the queue id and data
  */
 void Queue::print() {
     std::cout << "---------Printing the Queue----------" << std::endl;
@@ -32,8 +32,9 @@ void Queue::print() {
         QueueItem *curItem = _pHead;
         QueueItem *nextItem = curItem->getNext();
         do {
+            nextItem = curItem->getNext();
             std::cout << "Item: " << curItem->getId() << " - " << curItem->getData() << std::endl;
-            curItem = curItem->getNext();
+            curItem = nextItem;
         } while (nextItem != 0);
     } else {
         std::cout << "The queue is empty" << std::endl;
