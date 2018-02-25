@@ -32,3 +32,10 @@ TString::~TString() {
 int TString::length() const {
     return this->mLength;
 }
+
+/*
+ * Returns object as a char array reference
+ */
+const char *TString::asChar() const {
+    return mpText;
+}
