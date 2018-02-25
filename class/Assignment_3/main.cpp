@@ -18,6 +18,7 @@ int main() {
     std::cout << "assign str5 to str2" << std::endl;
     str2.assign(str5.asChar());
     std::cout << "str5 as char: " << str5.asChar() << std::endl;
+    std::cout << "str2 and str5 are qual?: " << str2.equals(&str5) << std::endl;
     // TODO
     //length()
     //asChar()

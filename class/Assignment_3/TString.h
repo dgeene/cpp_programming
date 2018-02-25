@@ -10,6 +10,7 @@ class TString {
         const char *asChar() const;
         void assign(const TString *strObj);
         void assign(const char *str);
+        bool equals(const TString *strObj) const;
         //TODO
     private:
         int mLength; // length of char data (does not include null terminator)

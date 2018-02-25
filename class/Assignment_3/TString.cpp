@@ -54,6 +54,17 @@ void TString::assign(const char *str) {
 }
 
 /*
+ * Compares two TString objects to see if they are the same
+ */
+bool TString::equals(const TString *strObj) const {
+    if (strcmp(this->mpText, strObj->asChar()) == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/*
  * Return the length of the charactr string
  */
 int TString::length() const {
