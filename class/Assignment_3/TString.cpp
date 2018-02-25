@@ -41,6 +41,19 @@ void TString::assign(const TString *strObj) {
 }
 
 /*
+ * Assign one TString's character data to another
+ */
+void TString::assign(const char *str) {
+    if (this->mpText == str)
+        return;
+
+    delete this->mpText;
+    this->mLength = strlen(str);
+    this->mpText = new char[this->mLength];
+    strcpy(this->mpText, str);
+}
+
+/*
  * Return the length of the charactr string
  */
 int TString::length() const {
