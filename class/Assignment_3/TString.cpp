@@ -65,6 +65,24 @@ bool TString::equals(const TString *strObj) const {
 }
 
 /*
+ * Searches for a given letter in a TString object.
+ * Returns -1 if character is not found
+ * Retuns the index of the first character found.
+ */
+int TString::indexOf(char letter) const {
+    int i = 0;
+    int isFoundAt = -1;
+    while (this->mpText[i] != '\0') {
+        if (this->mpText[i] == letter) {
+            isFoundAt = i;
+            break;
+        }
+        i++;
+    }
+    return isFoundAt;
+}
+
+/*
  * Return the length of the charactr string
  */
 int TString::length() const {

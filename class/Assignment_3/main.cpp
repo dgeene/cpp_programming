@@ -19,6 +19,7 @@ int main() {
     str2.assign(str5.asChar());
     std::cout << "str5 as char: " << str5.asChar() << std::endl;
     std::cout << "str2 and str5 are qual?: " << str2.equals(&str5) << std::endl;
+    std::cout << "searching for 'l' in str1: " << str1.indexOf('g') << std::endl;
     // TODO
     //length()
     //asChar()

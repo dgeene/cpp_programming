@@ -11,7 +11,7 @@ class TString {
         void assign(const TString *strObj);
         void assign(const char *str);
         bool equals(const TString *strObj) const;
-        //TODO
+        int indexOf(char letter) const;
     private:
         int mLength; // length of char data (does not include null terminator)
         char *mpText; // pointer to dynamic char array in heap
