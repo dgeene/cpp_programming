@@ -4,7 +4,8 @@
 int main() {
     std::cout << "hello" << std::endl;
 
-    const TString myStr(0);
+    const TString str1("Hello");
+    const TString str2("");
     // TODO
     //length()
     //asChar()
