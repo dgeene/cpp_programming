@@ -5,17 +5,19 @@
 TString::TString(const char *pText) {
     if (pText != 0 && pText[0] != '\0') {
         this->mLength = strlen(pText);
-        this->mpText = new char[mLength];
+        this->mpText = new char[this->mLength];
         strcpy(this->mpText, pText);
     } else {
         this->mLength = 1;
-        this->mpText = new char[mLength]; // TODO add \0
+        this->mpText = new char[this->mLength]; // TODO add \0
     }
 
 }
 
 TString::TString(const TString *string) {
     std::cout << "copy ctor called" << std::endl;
+    this->mLength = string->length();
+    this->mpText = new char[this->mLength];
 }
 
 TString::~TString() {
