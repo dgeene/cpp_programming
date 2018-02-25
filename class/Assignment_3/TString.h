@@ -8,6 +8,7 @@ class TString {
         ~TString();
         int length() const;
         const char *asChar() const;
+        void assign(const TString *strObj);
         //TODO
     private:
         int mLength; // length of char data (does not include null terminator)

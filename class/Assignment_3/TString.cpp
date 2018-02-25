@@ -18,12 +18,26 @@ TString::TString(const TString *string) {
     std::cout << "copy ctor called" << std::endl;
     this->mLength = string->length();
     this->mpText = new char[this->mLength];
+    strcpy(this->mpText, string->asChar());
 }
 
 TString::~TString() {
     delete this->mpText;
     this->mpText = 0;
     this->mLength = 0;
+}
+
+/*
+ * Assign one TString's character data to another
+ */
+void TString::assign(const TString *strObj) {
+    if (this == strObj)
+        return;
+
+    delete this->mpText;
+    this->mLength = strObj->length();
+    this->mpText = new char[this->mLength];
+    strcpy(this->mpText, strObj->asChar());
 }
 
 /*
