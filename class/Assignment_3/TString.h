@@ -4,6 +4,9 @@
 class TString {
     public:
         TString(const char *pText = 0);
+        TString(const TString *string);
+        ~TString();
+        int length() const;
         //TODO
     private:
         int mLength; // length of char data (does not include null terminator)
