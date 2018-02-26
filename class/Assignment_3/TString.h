@@ -4,13 +4,14 @@
 class TString {
     public:
         TString(const char *pText = 0);
-        TString(const TString *string);
+        TString(const TString& string);
         ~TString();
         int length() const;
         const char *asChar() const;
-        void assign(const TString *strObj);
+        void assign(const TString strObj);
         void assign(const char *str);
         bool equals(const TString *strObj) const;
+        bool equals(const char* str) const;
         int indexOf(char letter) const;
     private:
         int mLength; // length of char data (does not include null terminator)

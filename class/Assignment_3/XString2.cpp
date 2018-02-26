@@ -60,10 +60,10 @@ using std::ios;
 // Note - If you are not using Microsoft Visual Studio, you may need to uncomment the following
 // code for this test program to compile. strcpy_s is Microsoft's secure replacement for strcpy
 // and may not exist in other development environments. 
-/*
+
 #include <cstring>
 #define strcpy_s(a, b, c) strncpy(a, c, b)
-*/
+
 
 const char *pOutfileName = "XStringOut.txt";
 

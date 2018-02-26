@@ -13,17 +13,18 @@ int main() {
     std::cout << "length of str2: " << str2.length() << std::endl;
     std::cout << "str1 as char: " << str1.asChar() << std::endl;
     std::cout << "assign str1 to str2" << std::endl;
-    str2.assign(&str1);
+    str2.assign(str1);
     std::cout << "str2 as char: " << str2.asChar() << std::endl;
     std::cout << "assign str5 to str2" << std::endl;
     str2.assign(str5.asChar());
     std::cout << "str5 as char: " << str5.asChar() << std::endl;
     std::cout << "str2 and str5 are qual?: " << str2.equals(&str5) << std::endl;
-    std::cout << "searching for 'l' in str1: " << str1.indexOf('g') << std::endl;
-    // TODO
-    //length()
-    //asChar()
-    //...
+    std::cout << "searching for 'g' in str1: " << str1.indexOf('g') << std::endl;
+    std::cout << "empty!" << std::endl;
+    TString s0;
+    std::cout << "s0:" << s0.asChar() << std::endl;
+    TString s1(s0);
+
 
     return 0;
 }
