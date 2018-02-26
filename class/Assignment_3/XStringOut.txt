@@ -1,0 +1,67 @@
+----- simple String class test ----- (02/01/2013)
+
+
+----- Step 1 - default ctor -----
+s0 using default ctor with default arg = "" (length = 0)
+OK: length = 0
+OK: asChar() return value 0x0x2141260
+OK: null byte at position 0
+OK: doesn't point at static literal ""
+
+s0 using default ctor with char* parameter = "Hello" (length = 5)
+OK: length = 5
+OK: value is "Hello"
+OK: different pointer value returned from asChar()
+OK: same pointer value returned for successive calls of asChar()
+
+----- Step 2 - copy ctor -----
+s1 using copy ctor = "Hi Mom!" (length = 7)
+OK: length = 7
+OK: different pointer value returned from asChar()
+OK: value is "Hi Mom!"
+s1 using copy ctor = "" (length = 0)
+OK: length = 0
+OK: asChar() return value 0x0x2141280
+OK: different pointer value returned from asChar()
+OK: null byte at position 0
+s1 using copy ctor = "" (length = 0)
+OK: length = 0
+OK: asChar() return value 0x0x2141280
+OK: different pointer value returned from asChar()
+OK: null byte at position 0
+
+----- Step 3 - assign -----
+s0 using assign with char* parameter = "Hello" (length = 5)
+OK: length = 5
+OK: value is "Hello"
+OK: different pointer value returned from asChar()
+
+s1 using assign with String parameter = "Hi Mom!" (length = 7)
+OK: length = 7
+OK: value is "Hi Mom!"
+OK: different pointer value returned from asChar()
+
+s1 using assign with String parameter = "Hello world from C++" (length = 20)
+OK: length = 20
+OK: value is "Hello world from C++"
+OK: different pointer value returned from asChar()
+
+s1 assign to self
+OK: same  asChar() return value after String assign to self
+OK: same  asChar() return value after asChar() assign to self
+
+s1 assign with char* parameter
+s1 = "Hi " (length = 3)
+OK: matches "Hi "
+OK: doesn't match ""
+
+----- Step 4 - Null ptr and empty string -----
+
+Assigning empty string to s1 = "not empty"
+s1 = "" (length = 0)
+OK: matches ""
+OK: length = 0
+OK: asChar() return value 0x0x2141260
+
+Assigning null pointer to s1 = "still not empty"
+Segmentation fault
