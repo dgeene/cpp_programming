@@ -1,11 +1,15 @@
 class INT {
     public:
-        INT() {
-            num = 0;
+        INT(int num = 0) {
+            mNum = num;
         }
-        void operator = (const INT &I) {
-            num = I.num;
-        }
+        /*INT& operator = (const I& i) {
+            num = i.num;
+            return *this;
+        }*/
+        /*operator int() {
+            return num;
+        }*/
     private:
-        int num;
+        int mNum;
 };
