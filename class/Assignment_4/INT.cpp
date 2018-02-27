@@ -25,6 +25,11 @@ INT& INT::operator += (unsigned int numToAdd) {
     return *this;
 }
 
+INT& INT::operator -= (unsigned int numToSubtract) {
+    mNum = mNum - numToSubtract;
+    return *this;
+}
+
 /*
  * Overloaded output stream operator
  */

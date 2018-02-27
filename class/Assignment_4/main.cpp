@@ -15,4 +15,7 @@ int main() {
 
     x += 43;
     std::cout << "x += 43 = " << x << std::endl;
+
+    x -= 3;
+    std::cout << "x -= 43 = " << x << std::endl;
 }
