@@ -19,4 +19,7 @@ int main() {
     std::cout << "a = " << a << "  b = " << b << std::endl;
 
     std::cout << "The absolute value of x is " << abs(x) << std::endl;
+
+    INT c = 6;
+    INT z = c;
 }

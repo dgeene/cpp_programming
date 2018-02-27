@@ -4,6 +4,7 @@ INT::INT(int num) {
     mNum = num;
 }
 
+// copy ctor
 /*INT::INT(const INT& intToCopy) {
     mNum = intToCopy;
 }*/

@@ -3,7 +3,7 @@
 //
 // Adjust the includes and main declaration for your development environment...
 
-#include "stdafx.h"
+//#include "stdafx.h"
 
 #include "INT.h"
 
@@ -16,7 +16,8 @@ using std::abs;
 
 // note - you may need to change the definition of the main function to
 // be consistent with what your C++ compiler expects.
-int _tmain(int argc, _TCHAR* argv[])
+//int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
     cout << endl << "A test of the INT class  (07/05/13)" << endl << endl;
     INT x,y = 6;

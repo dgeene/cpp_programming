@@ -4,3 +4,6 @@ CXX=g++
 default:
 	$(CXX) main.cpp INT.cpp
 
+submission:
+	$(CXX) INTDemo.cpp INT.cpp
+
