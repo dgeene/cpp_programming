@@ -18,4 +18,10 @@ int main() {
 
     x -= 3;
     std::cout << "x -= 43 = " << x << std::endl;
+
+    ++x;
+    std::cout << "++x = " << x << std::endl;
+
+    x++;
+    std::cout << "x++ = " << x << std::endl;
 }

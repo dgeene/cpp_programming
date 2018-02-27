@@ -30,6 +30,19 @@ INT& INT::operator -= (unsigned int numToSubtract) {
     return *this;
 }
 
+// prefix ++x
+INT& INT::operator ++ () {
+    mNum = mNum + 1;
+    return *this;
+}
+
+// postfix x++
+INT INT::operator ++ (int) {
+    INT temp = *this; // cpp11|14 INT temp{*this};
+    mNum = mNum + 1;
+    return temp;
+}
+
 /*
  * Overloaded output stream operator
  */
