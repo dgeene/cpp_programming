@@ -12,4 +12,7 @@ int main() {
 
     x = a + b;
     std::cout << "x = a + b = " << x << std::endl;
+
+    x += 43;
+    std::cout << "x += 43 = " << x << std::endl;
 }

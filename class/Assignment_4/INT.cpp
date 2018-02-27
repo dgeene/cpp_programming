@@ -20,6 +20,11 @@ INT::operator int() const {
     return mNum;
 }*/
 
+INT& INT::operator += (unsigned int numToAdd) {
+    mNum = mNum + numToAdd;
+    return *this;
+}
+
 /*
  * Overloaded output stream operator
  */
