@@ -2,15 +2,9 @@
 
 class INT {
     public:
-        INT(int num = 0);
+        /* TODO add explicit*/INT(int num = 0);
+        operator int() const;
         friend std::ostream& operator << (std::ostream&, const INT&);
-        /*INT& operator = (const I& i) {
-            num = i.num;
-            return *this;
-        }*/
-        /*operator int() {
-            return num;
-        }*/
     private:
         int mNum;
 };

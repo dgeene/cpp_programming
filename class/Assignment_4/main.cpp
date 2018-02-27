@@ -4,10 +4,12 @@
 // a simpler test than the INTDemo and RINTDemo
 int main() {
     INT x;
-    //INT y = 6;
+    INT y = 6;
     int a = 5, b = 2;
 
     std::cout << "x = " << x << std::endl;
+    std::cout << "y = " << y << std::endl;
 
-    //x = a + b;
+    x = a + b;
+    std::cout << "x = a + b = " << x << std::endl;
 }
