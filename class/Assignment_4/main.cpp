@@ -7,27 +7,16 @@ int main() {
     INT y = 6;
     int a = 5, b = 2;
 
-    std::cout << "x = " << x << std::endl;
-    std::cout << "y = " << y << std::endl;
-
     x = a + b;
-    std::cout << "x = a + b = " << x << std::endl;
-
     x += 43;
-    std::cout << "x += 43 = " << x << std::endl;
-
     x -= 3;
-    std::cout << "x -= 43 = " << x << std::endl;
+    std::cout << "x = " << x << "  a = " << a << std::endl;
 
-    ++x;
-    std::cout << "++x = " << x << std::endl;
+    a = x + --y;
+    b = x++;
 
-    x++;
-    std::cout << "x++ = " << x << std::endl;
+    std::cout << "x = " << x << "  y = " << y << std::endl;
+    std::cout << "a = " << a << "  b = " << b << std::endl;
 
-    --x;
-    std::cout << "--x = " << x << std::endl;
-
-    x--;
-    std::cout << "x-- = " << x << std::endl;
+    std::cout << "The absolute value of x is " << abs(x) << std::endl;
 }

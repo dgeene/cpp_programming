@@ -4,6 +4,10 @@ INT::INT(int num) {
     mNum = num;
 }
 
+/*INT::INT(const INT& intToCopy) {
+    mNum = intToCopy;
+}*/
+
 /* TODO not working
 
 g++ main.cpp INT.cpp
@@ -15,10 +19,11 @@ main.cpp:7:9: error: no viable conversion from 'int' to 'INT'
 class INT {
       ^
 1 error generated.
-
+*/
+// int() conversion
 INT::operator int() const {
     return mNum;
-}*/
+}
 
 INT& INT::operator += (unsigned int numToAdd) {
     mNum = mNum + numToAdd;

@@ -3,6 +3,7 @@
 class INT {
     public:
         /* TODO add explicit*/INT(int num = 0);
+        //INT(const INT&); // copy ctor
         operator int() const;
         INT& operator += (unsigned int);
         INT& operator -= (unsigned int);
