@@ -38,8 +38,21 @@ INT& INT::operator ++ () {
 
 // postfix x++
 INT INT::operator ++ (int) {
-    INT temp = *this; // cpp11|14 INT temp{*this};
+    INT temp = *this; // cpp11|14? INT temp{*this};
     mNum = mNum + 1;
+    return temp;
+}
+
+// prefix --x
+INT& INT::operator -- () {
+    mNum = mNum - 1;
+    return *this;
+}
+
+// postfix x--
+INT INT::operator -- (int) {
+    INT temp = *this; // cpp11|14? INT temp{*this};
+    mNum = mNum - 1;
     return temp;
 }
 

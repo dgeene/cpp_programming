@@ -24,4 +24,10 @@ int main() {
 
     x++;
     std::cout << "x++ = " << x << std::endl;
+
+    --x;
+    std::cout << "--x = " << x << std::endl;
+
+    x--;
+    std::cout << "x-- = " << x << std::endl;
 }
