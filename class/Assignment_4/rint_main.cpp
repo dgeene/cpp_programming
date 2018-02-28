@@ -11,8 +11,10 @@ int main() {
     cin >> x;
     cout << "x is now: " << x << endl;
 
-    //x = x + 1;
-    //y = x - a;
+    x = x + 1;
+    cout << "x + 1 is now: " << x << endl;
+    y = x - a;
+    cout << "y = x - a is now: " << y << endl;
 
     //x++;       // should generate error
     //y += 3;    // should generate error

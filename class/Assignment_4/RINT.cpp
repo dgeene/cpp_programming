@@ -4,6 +4,14 @@ RINT::RINT(int num) {
     mNum = num;
 }
 
+RINT operator + (const RINT &num1, const RINT &num2) {
+    return RINT(num1.mNum + num2.mNum);
+}
+
+RINT operator - (const RINT &num1, const RINT &num2) {
+    return RINT(num1.mNum - num2.mNum);
+}
+
 /*
  * Overloaded output stream operator
  */
