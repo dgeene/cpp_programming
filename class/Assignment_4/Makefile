@@ -6,5 +6,6 @@ default:
 	$(CXX) -o RINT-test rint_main.cpp RINT.cpp
 
 submission:
-	$(CXX) INTDemo.cpp INT.cpp
+	$(CXX) -o INT-demo INTDemo.cpp INT.cpp
+	$(CXX) -o RINT-demo RINTDemo.cpp RINT.cpp
 
