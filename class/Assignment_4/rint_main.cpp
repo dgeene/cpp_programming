@@ -8,7 +8,8 @@ int main() {
     int a = 5, b = 2;
 
     cout << x << endl;
-    //cin >> x;
+    cin >> x;
+    cout << "x is now: " << x << endl;
 
     //x = x + 1;
     //y = x - a;
