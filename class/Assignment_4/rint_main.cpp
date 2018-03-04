@@ -16,6 +16,13 @@ int main() {
     y = x - a;
     cout << "y = x - a is now: " << y << endl;
 
+    x = 1;
+    x = -x;
+    cout << "x = -x: " << x << endl;
+
+    x = +x;
+    cout << "x = +x: " << x << endl;
+
     //x++;       // should generate error
     //y += 3;    // should generate error
 }

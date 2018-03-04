@@ -3,6 +3,8 @@
 class RINT {
     public:
         RINT(int num = 0);
+        RINT operator - ();
+        RINT operator + ();
         friend RINT operator + (const RINT &num1, const RINT &num2);
         friend RINT operator - (const RINT &num1, const RINT &num2);
         friend std::ostream& operator << (std::ostream&, const RINT&);
