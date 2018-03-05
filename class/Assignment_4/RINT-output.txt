@@ -1,0 +1,28 @@
+
+A test of the RINT class  (2/10/13)
+
+
+Here are the RINTs x = 0 and y = 4
+
+Here are the ints a = 5 and b = 2
+
+
+Testing stream input for RINT - enter an int value: 
+You entered an RINT value of 3
+
+Testing copy ctor
+If z is instantiated as y, z = 4 (should be 4)
+
+TESTING BINARY +
+If z = x + y and x = 5 and y = 6  then z = 11 (should be 11)
+If z = x + 10 and x = 5  then z = 15 (should be 15)
+If z = 1 + x and x = 5  then z = 6 (should be 6)
+
+TESTING BINARY -
+If z = x - y and x = 24 and y = 30  then z = -6 (should be -6)
+If z = x - 10 and x = 24  then z = 14 (should be 14)
+If z = 1 - x and x = 24  then z = -23 (should be -23)
+
+TESTING UNARY + - 
+x = -x  so x now = -1 (should be -1)
+x = +x  so x now = -1 (should be -1)

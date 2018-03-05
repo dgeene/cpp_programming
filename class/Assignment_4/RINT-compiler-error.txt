@@ -1,0 +1,10 @@
+g++ -o INT-demo INTDemo.cpp INT.cpp
+g++ -o RINT-demo RINTDemo.cpp RINT.cpp
+RINTDemo.cpp:76:6: error: cannot increment value of type 'RINT'
+    x++;      //generates compile error
+    ~^
+RINTDemo.cpp:77:7: error: no viable overloaded '+='
+    y += 3;   //generates compile error
+    ~ ^  ~
+2 errors generated.
+make: *** [submission] Error 1
