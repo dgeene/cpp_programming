@@ -1,13 +1,14 @@
 #include <iostream>
 #include "Shape.h"
 
-#include "Square.h"
+#include "Rectangle.h"
 using namespace std;
 
 int main() {
     cout << "Enter a list of shapes OR - 'done' to end" << endl;
     string blue("red");
-    double rad = 3;
-    Shape* snape = new Square(blue, rad);
+    double w = 3;
+    double l = 4;
+    Shape* snape = new Rectangle(blue, w, l);
     cout << "the shape is: " << snape->toString() << endl;
 }
