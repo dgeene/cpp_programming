@@ -7,6 +7,7 @@ using namespace std;
 int main() {
     cout << "Enter a list of shapes OR - 'done' to end" << endl;
     string blue("blue");
-    double rad = 0.5;
+    double rad = 2;
     Shape* snape = new Circle(blue, rad);
+    cout << "the area is: " << snape->area() << endl;
 }
