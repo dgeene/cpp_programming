@@ -9,5 +9,5 @@ int main() {
     string blue("blue");
     double rad = 2;
     Shape* snape = new Circle(blue, rad);
-    cout << "the area is: " << snape->area() << endl;
+    cout << "the shape is: " << snape->toString() << endl;
 }
