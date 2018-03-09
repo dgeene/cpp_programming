@@ -2,7 +2,5 @@ CXX=g++
 #CPP_FLAGS="-std=c++14"
 
 default:
-	$(CXX) main.cpp
+	$(CXX) -std=c++14 main.cpp
 
-submission:
-	$(CXX) XString2.cpp
