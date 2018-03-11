@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Assignment 5
+ */
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 #include "Shape.h"

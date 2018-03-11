@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Assignment 5
+ */
 #include <iostream>
 #include "getShape.h"
 #include "Shape.h"
@@ -6,6 +11,18 @@ using namespace std;
 
 #define SIZE 10
 
+/*
+ * Prompts the user to enter a color and then a shape.
+ * It will then ask for additional properties about that shape.
+ * The list of shapes is printed. Then the list is sorted
+ *  by area size and then printed again.
+ *
+ * Valid shapes: circle, square, rectangle
+ *
+ * Some notes:
+ * Code relies on a zeroed out array
+ * Shape list is fixed to 10
+ */
 int main() {
 
     Shape* myShapes[SIZE] = { 0 };
@@ -23,6 +40,8 @@ int main() {
         myShapes[count] = shapePtr;
         ++count;
     }
+
+
 
     if (myShapes[0] != NULL) {
 
@@ -63,5 +82,4 @@ int main() {
         }
     }
 
-    cout << "end" << endl;
 }

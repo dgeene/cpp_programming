@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Assignment 5
+ */
 #ifndef SHAPE_H
 #define SHAPE_H
 #include <string>
