@@ -38,8 +38,19 @@ int main() {
 
         // now sort the list
         for (int i = 0; i < SIZE; i++) {
-
+            if (myShapes[i] == NULL)
+                break;
+            for (int j = 0; j < SIZE; j++) {
+                if (myShapes[j+1] == NULL) // peek ahead
+                    break;
+                if (myShapes[j]->area() > myShapes[j+1]->area()) {
+                    Shape* tmp = myShapes[j];
+                    myShapes[j] = myShapes[j+1];
+                    myShapes[j+1] = tmp;
+                }
+            }
         }
+
 
         // print the list of shapes
         cout << endl << endl

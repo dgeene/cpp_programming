@@ -1,0 +1,55 @@
+david@woz:~/cpp-stuff/cpp_programming/class/Assignment_5$ ./a.out 
+Enter a list of shapes OR - 'done' to end
+Enter the shapes color  (or 'done')
+red
+Enter the shape type.. Options are [ circle | square | rectangle ]
+circle
+Enter the radius..
+2.4
+Enter the shapes color  (or 'done')
+blue
+Enter the shape type.. Options are [ circle | square | rectangle ]
+rectangle
+Enter the width..
+4
+Enter the length..
+6
+Enter the shapes color  (or 'done')
+brown
+Enter the shape type.. Options are [ circle | square | rectangle ]
+square
+Enter the length of a side..
+3
+Enter the shapes color  (or 'done')
+pink
+Enter the shape type.. Options are [ circle | square | rectangle ]
+circle
+Enter the radius..
+1
+Enter the shapes color  (or 'done')
+green
+Enter the shape type.. Options are [ circle | square | rectangle ]
+square
+Enter the length of a side..
+4
+Enter the shapes color  (or 'done')
+done
+
+
+---------------------------------
+The list of shapes entered
+red circle with a radius of 2.4 and an area of 18.0956
+blue rectangle with a length  of 6 and a width of 4 and an area of 24
+brown square with a side length of 3 and an area of 9
+pink circle with a radius of 1 and an area of 3.14159
+green square with a side length of 4 and an area of 16
+
+
+---------------------------------
+The list of shapes sorted
+pink circle with a radius of 1 and an area of 3.14159
+brown square with a side length of 3 and an area of 9
+green square with a side length of 4 and an area of 16
+red circle with a radius of 2.4 and an area of 18.0956
+blue rectangle with a length  of 6 and a width of 4 and an area of 24
+end
