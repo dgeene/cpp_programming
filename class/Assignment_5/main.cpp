@@ -24,11 +24,27 @@ int main() {
         ++count;
     }
 
-    // print the list of shapes
     if (myShapes[0] != NULL) {
+
+        // print the list of shapes
         cout << endl << endl
         << "---------------------------------" << endl;
         cout << "The list of shapes entered" << endl;
+        for (int i = 0; i < SIZE; i++) {
+            if (myShapes[i] == NULL)
+                break;
+            cout << myShapes[i]->toString() << endl;
+        }
+
+        // now sort the list
+        for (int i = 0; i < SIZE; i++) {
+
+        }
+
+        // print the list of shapes
+        cout << endl << endl
+        << "---------------------------------" << endl;
+        cout << "The list of shapes sorted" << endl;
         for (int i = 0; i < SIZE; i++) {
             if (myShapes[i] == NULL)
                 break;
