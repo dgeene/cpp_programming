@@ -6,22 +6,15 @@ using namespace std;
 
 Card::Card(string fName, string lName, string occupation, string address, string phone) {
     this->setFirstName(fName);
-}
-
-////////// Setters ////////////
-void Card::setFirstName(string fName) {
-    mFirstName = fName;
-}
-
-
-////////// Getters ////////////
-string Card::getFirstName() {
-    return mFirstName;
+    this->setLastName(lName);
+    this->setOccupation(occupation);
+    this->setAddress(occupation);
+    this->setPhone(phone);
 }
 
 
 string Card::show() {
     std::ostringstream oss;
-    oss << this->getFirstName() << " | " << endl;
+    oss << this->getFirstName() << " | " << this->getLastName() << " | " << endl;
     return oss.str();
 }
