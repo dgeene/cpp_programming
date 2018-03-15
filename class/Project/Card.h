@@ -8,6 +8,8 @@ class Card {
     public:
         Card(string fName, string lName, string occupation, string address, string phone);
         string show();
+        void setFirstName(string fName);
+        string getFirstName();
     private:
         string mLastName;
         string mFirstName;
