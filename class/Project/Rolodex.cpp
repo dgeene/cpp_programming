@@ -1,3 +1,4 @@
+#include <sstream>
 #include "Rolodex.h"
 #include "Card.h"
 
@@ -12,8 +13,13 @@ void Rolodex::add(Card& card) {
  *  call display on each items contents
  */
 void Rolodex::show(ostream& os) {
-    list <Card> :: iterator iCard;
-    for (iCard = mCollection.begin(); iCard != mCollection.end(); ++iCard) {
-        iCard->show(os);
+    if (mCollection.empty() != 1) {
+        list <Card> :: iterator iCard;
+        for (iCard = mCollection.begin(); iCard != mCollection.end(); ++iCard) {
+            iCard->show(os);
+        }
+    } else {
+        os << "The rolodex is empty!" << std::endl;
     }
+
 }
