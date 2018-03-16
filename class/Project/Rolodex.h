@@ -5,8 +5,10 @@
 
 class Rolodex {
     public:
-        Rolodex();
+        //Rolodex(); // why does this cause g++ error - Undefined symbols for architecture x86_64: and ld error?
+        void add(Card& card);
     private:
         list <Card> collection;
-}
+        list <Card> :: iterator selected;
+};
 #endif
