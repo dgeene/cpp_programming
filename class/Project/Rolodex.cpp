@@ -6,6 +6,11 @@ void Rolodex::add(Card& card) {
     // dupes are allowed
     // TODO insert new card in correct alphabetical order
     mCollection.push_back(card);
+    mSelected = mCollection.end();
+}
+
+void Rolodex::getCurrentCard() {
+    //return mSelected;
 }
 
 /*
@@ -14,7 +19,7 @@ void Rolodex::add(Card& card) {
  */
 void Rolodex::show(ostream& os) {
     if (mCollection.empty() != 1) {
-        list <Card> :: iterator iCard;
+        vector <Card> :: iterator iCard;
         for (iCard = mCollection.begin(); iCard != mCollection.end(); ++iCard) {
             iCard->show(os);
         }
