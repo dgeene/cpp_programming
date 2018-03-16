@@ -11,11 +11,12 @@ int main() {
     Rolodex rolo;
 
     Card c1 = Card("John", "Doe", "Welder", "21 Brown Street", "555-555-5555");
+    Card c2 = Card("Sara", "Weathers", "Accountant", "100 Bling St.", "535-422-5555");
 
     rolo.add( c1 );
-    //Card c1 = Card("John", "Doe", "Welder", "21 Brown Street", "555-555-5555");
+    rolo.add( c2 );
 
     cout << "First | Last | Occupation " << std::endl;
-    c1.show(oss);
+    rolo.show(oss);
     cout << oss.str();
 }

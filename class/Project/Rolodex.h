@@ -9,7 +9,7 @@ class Rolodex {
         void add(Card& card);
         void show(ostream& os);
     private:
-        list <Card> collection;
-        list <Card> :: iterator selected;
+        list <Card> mCollection;
+        list <Card> :: iterator mSelected;
 };
 #endif
