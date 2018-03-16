@@ -7,7 +7,7 @@ using namespace std;
 class Card {
     public:
         Card(string fName, string lName, string occupation, string address, string phone);
-        string show();
+        void show(ostream& os);
 
         // setters
         void setFirstName(string fName) { mFirstName = fName; }

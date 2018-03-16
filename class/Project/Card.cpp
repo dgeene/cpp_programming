@@ -13,8 +13,9 @@ Card::Card(string fName, string lName, string occupation, string address, string
 }
 
 
-string Card::show() {
-    std::ostringstream oss;
-    oss << this->getFirstName() << " | " << this->getLastName() << " | " << endl;
-    return oss.str();
+/*
+ * Fils an ostream buffer reference with details about the card
+ */
+void Card::show(ostream& os) {
+    os << this->getFirstName() << " | " << this->getLastName() << " | " << endl;
 }
