@@ -9,8 +9,8 @@ void Rolodex::add(Card& card) {
     mSelected = mCollection.end();
 }
 
-void Rolodex::getCurrentCard() {
-    //return mSelected;
+Card Rolodex::getCurrentCard() {
+    return *mSelected;
 }
 
 /*

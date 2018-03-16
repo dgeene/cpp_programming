@@ -19,4 +19,8 @@ int main() {
     cout << "First | Last | Occupation " << std::endl;
     rolo.show(oss);
     cout << oss.str();
+
+    //Card curr = rolo.getCurrentCard();
+    //urr.show(oss);
+    //cout << oss.str();
 }
