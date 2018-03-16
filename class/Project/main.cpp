@@ -14,5 +14,5 @@ int main() {
     //Card c1 = Card("John", "Doe", "Welder", "21 Brown Street", "555-555-5555");
 
     cout << "First | Last | Occupation " << std::endl;
-    //cout << mine.show();
+    cout << c1.show();
 }
