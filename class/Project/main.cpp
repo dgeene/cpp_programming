@@ -10,8 +10,8 @@ int main() {
     std::ostringstream oss;
     Rolodex rolo;
 
-    Card c1 = Card("John", "Doe", "Welder", "21 Brown Street", "555-555-5555");
-    Card c2 = Card("Sara", "Weathers", "Accountant", "100 Bling St.", "535-422-5555");
+    Card c1 = Card("John", "Bonbon", "Welder", "21 Brown Street", "555-555-5555");
+    Card c2 = Card("Jane", "Applebee", "Accountant", "100 Bling St.", "535-422-5555");
 
     rolo.add( c1 );
     rolo.add( c2 );

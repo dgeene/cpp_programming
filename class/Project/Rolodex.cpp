@@ -1,12 +1,17 @@
 #include <sstream>
+#include <iostream> // temporary
 #include "Rolodex.h"
 #include "Card.h"
 
 void Rolodex::add(Card& card) {
     // dupes are allowed
     // TODO insert new card in correct alphabetical order
-    mCollection.push_back(card);
-    mSelected = mCollection.end();
+    if (mCollection.empty() == 1) {
+        mCollection.push_back(card);
+        mSelected = mCollection.end();
+    } else {
+        this->shouldInsertAlphabeticallyAt(card);
+    }
 }
 
 Card Rolodex::getCurrentCard() {
@@ -27,4 +32,17 @@ void Rolodex::show(ostream& os) {
         os << "The rolodex is empty!" << std::endl;
     }
 
+}
+
+vector <Card> :: iterator Rolodex::shouldInsertAlphabeticallyAt(Card& card) {
+    vector <Card> :: iterator position;
+    for (position = mCollection.begin(); position != mCollection.end(); ++position) {
+        if (card.getLastName() > position->getLastName()) {
+            std::cout << card.getLastName() << " is greater than " << position->getLastName() << std::endl;
+        } else {
+            std::cout << card.getLastName() << " is less than " << position->getLastName() << std::endl;
+
+        }
+    }
+    return position;
 }

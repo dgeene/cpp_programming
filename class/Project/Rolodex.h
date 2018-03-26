@@ -10,6 +10,7 @@ class Rolodex {
         Card getCurrentCard();
         void show(ostream& os);
     private:
+        vector <Card> :: iterator shouldInsertAlphabeticallyAt(Card& card);
         vector <Card> mCollection;
         vector <Card> :: iterator mSelected;
 };
