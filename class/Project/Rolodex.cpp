@@ -41,11 +41,9 @@ void Rolodex::show(ostream& os) {
 vector <Card> :: iterator Rolodex::shouldInsertAlphabeticallyAt(Card& card) {
     vector <Card> :: iterator position;
     position = mCollection.begin();
-    bool positionFound = false;
-    while(!positionFound) {
+    while(true) {
         if (position == mCollection.end()) {
             // we reached the end. insert at the end.
-            std::cout << " breaking out " << std::endl;
             mCollection.push_back(card);
             break;
         }

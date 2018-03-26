@@ -16,6 +16,8 @@ int main() {
     Card c4 = Card("Jane", "Applebee", "Accountant", "100 Bling St.", "535-422-5555");
     Card c5 = Card("Do", "Zed", "Accountant", "100 Bling St.", "535-422-5555");
     Card c6 = Card("Nash", "Jay", "Accountant", "100 Bling St.", "535-422-5555");
+    Card c7 = Card("Ashley", "Bonbon", "Welder", "21 Brown Street", "555-555-5555");
+
 
 
     rolo.add( c1 );
@@ -24,6 +26,7 @@ int main() {
     rolo.add( c4 );
     rolo.add( c5 );
     rolo.add( c6 );
+    rolo.add( c7 );
 
     cout << "First | Last | Occupation " << std::endl;
     rolo.show(oss);
