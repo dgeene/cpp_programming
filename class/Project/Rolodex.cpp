@@ -36,12 +36,31 @@ void Rolodex::show(ostream& os) {
 
 vector <Card> :: iterator Rolodex::shouldInsertAlphabeticallyAt(Card& card) {
     vector <Card> :: iterator position;
-    for (position = mCollection.begin(); position != mCollection.end(); ++position) {
-        if (card.getLastName() > position->getLastName()) {
-            std::cout << card.getLastName() << " is greater than " << position->getLastName() << std::endl;
-        } else {
-            std::cout << card.getLastName() << " is less than " << position->getLastName() << std::endl;
+    position = mCollection.begin();
+    bool positionFound = false;
+    while(!positionFound) {
+        if (card.getLastName() < position->getLastName()) {
+            // we overstepped. back up and insert at this position
+            //--position;
+            mCollection.insert(position, card);
+            //++position;
+            break;
+        } else if (card.getLastName() > position->getLastName()){
+            ++position;
+            //continue;
+            break;
 
+        } else if (card.getLastName() == position->getLastName()) {
+            // last names are equal sort by first name then
+            std::cout << " last names are equivalent  " << std::endl;
+            break;
+        }
+
+        // we reached the end. insert at the end.
+        if (position == mCollection.end()) {
+            std::cout << " breaking out " << std::endl;
+            mCollection.push_back(card);
+            break;
         }
     }
     return position;
