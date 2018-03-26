@@ -14,11 +14,16 @@ int main() {
     Card c2 = Card("Ben", "Carpenter", "Welder", "21 Brown Street", "555-555-5555");
     Card c3 = Card("John", "Bonbon", "Welder", "21 Brown Street", "555-555-5555");
     Card c4 = Card("Jane", "Applebee", "Accountant", "100 Bling St.", "535-422-5555");
+    Card c5 = Card("Do", "Zed", "Accountant", "100 Bling St.", "535-422-5555");
+    Card c6 = Card("Nash", "Jay", "Accountant", "100 Bling St.", "535-422-5555");
+
 
     rolo.add( c1 );
     rolo.add( c2 );
     rolo.add( c3 );
     rolo.add( c4 );
+    rolo.add( c5 );
+    rolo.add( c6 );
 
     cout << "First | Last | Occupation " << std::endl;
     rolo.show(oss);
