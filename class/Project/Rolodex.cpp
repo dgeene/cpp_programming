@@ -2,15 +2,18 @@
 #include <iostream> // temporary
 #include "Rolodex.h"
 #include "Card.h"
-
+#include <sstream> // tem[p]
 void Rolodex::add(Card& card) {
+    std::ostringstream oss;
     // dupes are allowed
     // TODO insert new card in correct alphabetical order
     if (mCollection.empty() == 1) {
         mCollection.push_back(card);
-        mSelected = mCollection.end();
+        mSelected = mCollection.begin();
     } else {
-        this->shouldInsertAlphabeticallyAt(card);
+        mSelected = this->shouldInsertAlphabeticallyAt(card);
+        mSelected->show(oss);
+        cout << oss.str();
     }
 }
 
@@ -35,7 +38,8 @@ void Rolodex::show(ostream& os) {
 }
 
 /*
- *
+ * Insert a card into the rolodex alphabetically.
+ * Duplicates are allowed
  * String comparisons: a < b
  */
 vector <Card> :: iterator Rolodex::shouldInsertAlphabeticallyAt(Card& card) {
@@ -45,6 +49,7 @@ vector <Card> :: iterator Rolodex::shouldInsertAlphabeticallyAt(Card& card) {
         if (position == mCollection.end()) {
             // we reached the end. insert at the end.
             mCollection.push_back(card);
+            --position;
             break;
         }
 
@@ -63,7 +68,6 @@ vector <Card> :: iterator Rolodex::shouldInsertAlphabeticallyAt(Card& card) {
                 ++position;
                 continue;
             } else if (card.getFirstName() == position->getFirstName()) {
-                std::cout << " found duplicate name  " << std::endl;
                 mCollection.insert(position, card);
                 break;
             }
