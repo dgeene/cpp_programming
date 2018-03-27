@@ -56,7 +56,17 @@ vector <Card> :: iterator Rolodex::shouldInsertAlphabeticallyAt(Card& card) {
             continue;
         } else if (card.getLastName() == position->getLastName()) {
             // last names are equal sort by first name then
-            std::cout << " last names are equivalent  " << std::endl;
+            if (card.getFirstName() < position->getFirstName()) {
+                mCollection.insert(position, card);
+                break;
+            } else if (card.getFirstName() > position->getFirstName()){
+                ++position;
+                continue;
+            } else if (card.getFirstName() == position->getFirstName()) {
+                std::cout << " found duplicate name  " << std::endl;
+                mCollection.insert(position, card);
+                break;
+            }
             break;
         }
 
