@@ -34,8 +34,8 @@ int main() {
     rolo.add( c9 );
 
     cout << "First | Last | Occupation " << std::endl;
-    rolo.show(oss);
-    cout << oss.str();
+    //rolo.show(oss);
+    //cout << oss.str();
 
     //Card curr = rolo.getCurrentCard();
     //urr.show(oss);

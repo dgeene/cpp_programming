@@ -1,5 +1,6 @@
 *.swp
 a.out
+.vscode
 scratch/
 class/Assignment_4/INT-test
 class/Assignment_4/RINT-test
