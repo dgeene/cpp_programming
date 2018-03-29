@@ -3,6 +3,9 @@
 #include <vector>
 #include "Card.h"
 
+/*
+ * Manages a collection of Cards and provides methods for searching and data access.
+ */
 class Rolodex {
     public:
         //Rolodex(); // why does this cause g++ error - Undefined symbols for architecture x86_64: and ld error?

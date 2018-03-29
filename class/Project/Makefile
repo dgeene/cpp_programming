@@ -1,6 +1,8 @@
 CXX=g++
-#CPP_FLAGS="-std=c++14"
+CPP_FLAGS=-std=c++14
 
 default:
-	$(CXX) -std=c++14 main.cpp Card.cpp Rolodex.cpp
+	$(CXX) $(CPP_FLAGS) main.cpp Card.cpp Rolodex.cpp
 
+test:
+	$(CXX) $(CPP_FLAGS) main-test.cpp Card.cpp Rolodex.cpp

@@ -51,11 +51,4 @@ int main() {
         cout << "found: " << found.getFirstName() << " " << found.getLastName() << std::endl;
     }
 
-
-
-
-
-    //Card curr = rolo.getCurrentCard();
-    //urr.show(oss);
-    //cout << oss.str();
 }

@@ -4,6 +4,10 @@
 
 using namespace std;
 
+/*
+ * Data container class to hold a single card.
+ * A card holds the name and contact information for a single person.
+ */
 class Card {
     public:
         Card(string fName, string lName, string occupation, string address, string phone);
