@@ -1,22 +1,18 @@
 #include <sstream>
-#include <iostream> // temporary
 #include "Rolodex.h"
 #include "Card.h"
-#include <sstream> // tem[p]
+
+/*
+ * Add a card to the rolodex.
+ * Duplicates are allowed.
+ */
 void Rolodex::add(Card& card) {
     std::ostringstream oss;
-    // dupes are allowed
-    // TODO insert new card in correct alphabetical order
     if (mCollection.empty() == 1) {
         mCollection.push_back(card);
         mSelected = mCollection.begin();
-        //mSelected->show(oss);
-        cout << mSelected->getLastName() << std::endl;
     } else {
         mSelected = this->insertAlphabeticallyAt(card);
-        Card a = this->getCurrentCard();
-        cout << "added: " << a.getFirstName() << " " << a.getLastName() << std::endl;
-        cout << oss.str();
     }
 }
 
