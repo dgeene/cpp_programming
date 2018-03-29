@@ -15,10 +15,23 @@ void Rolodex::add(Card& card) {
     } else {
         mSelected = this->insertAlphabeticallyAt(card);
         Card a = this->getCurrentCard();
-        cout << a.getLastName() << std::endl;
-        //mSelected->show(oss);
+        cout << "added: " << a.getFirstName() << " " << a.getLastName() << std::endl;
         cout << oss.str();
     }
+}
+
+/*
+ * Removes the current card from the rolodex and returns it.
+ * Sets the next card as mSelected or wraps around if last removed.
+ */
+Card Rolodex::remove() {
+    Card erased = *mSelected;
+    vector <Card> :: iterator nextCard = mCollection.erase(mSelected);
+    if (nextCard == mCollection.end()) {
+        nextCard = mCollection.begin();
+    }
+    mSelected = nextCard;
+    return erased;
 }
 
 Card Rolodex::getCurrentCard() {
@@ -53,7 +66,6 @@ vector <Card> :: iterator Rolodex::insertAlphabeticallyAt(Card& card) {
     while(true) {
         if (position == mCollection.end()) {
             // we reached the end. insert at the end.
-            mCollection.push_back(card);
             position = mCollection.insert(mCollection.end(), card);
             break;
         }

@@ -18,7 +18,7 @@ int main() {
     Card c6 = Card("Nash", "Jay", "Accountant", "100 Bling St.", "535-422-5555");
     Card c7 = Card("Ashley", "Bonbon", "Welder", "21 Brown Street", "555-555-5555");
     Card c8 = Card("Adam", "Bonbon", "Welder", "21 Brown Street", "555-555-5555");
-    Card c9 = Card("Ashley", "Bonbon", "Welder", "21 Brown Street", "555-555-5555");
+    Card c9 = Card("Te", "Zxy", "Welder", "21 Brown Street", "555-555-5555");
 
 
 
@@ -33,9 +33,16 @@ int main() {
     rolo.add( c8 );
     rolo.add( c9 );
 
+    cout << "----Rolodex List-----" << std::endl;
     cout << "First | Last | Occupation " << std::endl;
-    //rolo.show(oss);
-    //cout << oss.str();
+    rolo.show(oss);
+    cout << oss.str();
+
+    Card erased = rolo.remove();
+    cout << "erasing: " << erased.getFirstName() << " " << erased.getLastName() << std::endl;
+
+
+
 
     //Card curr = rolo.getCurrentCard();
     //urr.show(oss);
