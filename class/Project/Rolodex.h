@@ -8,6 +8,7 @@ class Rolodex {
         //Rolodex(); // why does this cause g++ error - Undefined symbols for architecture x86_64: and ld error?
         void add(Card& card);
         Card remove();
+        Card flip();
         Card getCurrentCard();
         void show(ostream& os);
     private:

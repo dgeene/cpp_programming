@@ -34,6 +34,14 @@ Card Rolodex::remove() {
     return erased;
 }
 
+Card Rolodex::flip() {
+    ++mSelected;
+    if (mSelected == mCollection.end()) {
+        mSelected = mCollection.begin();
+    }
+    return *mSelected;
+}
+
 Card Rolodex::getCurrentCard() {
     return *mSelected;
 }

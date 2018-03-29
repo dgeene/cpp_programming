@@ -41,6 +41,10 @@ int main() {
     Card erased = rolo.remove();
     cout << "erasing: " << erased.getFirstName() << " " << erased.getLastName() << std::endl;
 
+    Card flipped = rolo.flip();
+    cout << "flipped to: " << flipped.getFirstName() << " " << flipped.getLastName() << std::endl;
+
+
 
 
 
