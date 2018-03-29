@@ -34,6 +34,9 @@ Card Rolodex::remove() {
     return erased;
 }
 
+/*
+ * Flips to the next card or returns to beginning
+ */
 Card Rolodex::flip() {
     ++mSelected;
     if (mSelected == mCollection.end()) {
@@ -42,8 +45,34 @@ Card Rolodex::flip() {
     return *mSelected;
 }
 
+/*
+ * Returns the current selected card.
+ */
 Card Rolodex::getCurrentCard() {
     return *mSelected;
+}
+
+/*
+ * Searches the rolodex for lastname firstname person.
+ * If there are dupe entries then the first instance is found and returned.
+ */
+bool Rolodex::search(const std::string& lastName, const std::string& firstName) {
+    bool found = false;
+
+    if (mCollection.empty() != 1) {
+        vector <Card> :: iterator iCard;
+        for (iCard = mCollection.begin(); iCard != mCollection.end(); ++iCard) {
+            if (lastName == iCard->getLastName() &&
+                firstName == iCard->getFirstName() )
+            {
+                mSelected = iCard;
+                found = true;
+                break;
+            }
+        }
+    }
+
+    return found;
 }
 
 /*

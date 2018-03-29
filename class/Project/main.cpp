@@ -44,6 +44,13 @@ int main() {
     Card flipped = rolo.flip();
     cout << "flipped to: " << flipped.getFirstName() << " " << flipped.getLastName() << std::endl;
 
+    bool isFound = rolo.search("Jay", "Nash");
+    if (isFound) {
+        Card found = rolo.getCurrentCard();
+        cout << "positive match" << std::endl;
+        cout << "found: " << found.getFirstName() << " " << found.getLastName() << std::endl;
+    }
+
 
 
 

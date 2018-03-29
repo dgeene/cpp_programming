@@ -10,6 +10,7 @@ class Rolodex {
         Card remove();
         Card flip();
         Card getCurrentCard();
+        bool search(const std::string& lastName, const std::string& firstName);
         void show(ostream& os);
     private:
         vector <Card> :: iterator insertAlphabeticallyAt(Card& card);
