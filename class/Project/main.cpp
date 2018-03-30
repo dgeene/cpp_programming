@@ -14,7 +14,7 @@ void preload();
 int main() {
     cout << "===========Rolodex program===========" << endl;
 
-    std::ostringstream oss;
+    std::ostringstream oss; //TODO need to clear after each show()
     string command;
 
     preload();
@@ -30,9 +30,13 @@ int main() {
             rolo.show(oss);
             cout << oss.str();
         } else if (command == "view") {
-            cout << "viewing" << endl;
+            Card card = rolo.getCurrentCard();
+            card.show(oss);
+            cout << oss.str();
         } else if (command == "flip") {
-            cout << "flip" << endl;
+            Card card = rolo.flip();
+            card.show(oss);
+            cout << oss.str();
         } else if (command == "add") {
             cout << "add" << endl;
         } else if (command == "remove") {
