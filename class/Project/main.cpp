@@ -5,26 +5,46 @@
 
 using std::cout;
 using std::endl;
+using std::cin;
+
 
 Rolodex rolo;
 void preload();
 
 int main() {
     cout << "===========Rolodex program===========" << endl;
+
     std::ostringstream oss;
+    string command;
 
     preload();
 
     // [ List | view | flip | add | remove | search | quit ]
     while(true) {
-        break;
+        cout << "Enter a command for the rolodex [ List | view | flip | add | remove | search | quit ]" << endl;
+        cin >> command;
+
+        if (command == "list") {
+            cout << "-----Rolodex List-----" << endl;
+            cout << "First | Last | Occupation | Address | Phone" << endl;
+            rolo.show(oss);
+            cout << oss.str();
+        } else if (command == "view") {
+            cout << "viewing" << endl;
+        } else if (command == "flip") {
+            cout << "flip" << endl;
+        } else if (command == "add") {
+            cout << "add" << endl;
+        } else if (command == "remove") {
+            cout << "add" << endl;
+        } else if (command == "search") {
+            cout << "search" << endl;
+        } else if (command == "quit" || command == "exit") {
+            cout << "quit" << endl;
+            break;
+        }
     }
 
-
-    cout << "----Rolodex List-----" << std::endl;
-    cout << "First | Last | Occupation " << std::endl;
-    rolo.show(oss);
-    cout << oss.str();
 }
 
 void preload() {

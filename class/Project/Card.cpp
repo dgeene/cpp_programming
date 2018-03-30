@@ -8,7 +8,7 @@ Card::Card(string fName, string lName, string occupation, string address, string
     this->setFirstName(fName);
     this->setLastName(lName);
     this->setOccupation(occupation);
-    this->setAddress(occupation);
+    this->setAddress(address);
     this->setPhone(phone);
 }
 
@@ -17,5 +17,9 @@ Card::Card(string fName, string lName, string occupation, string address, string
  * Fils an ostream buffer reference with details about the card
  */
 void Card::show(ostream& os) {
-    os << this->getFirstName() << " | " << this->getLastName() << " | " << endl;
+    os << this->getFirstName() << " | "
+        << this->getLastName() << " | "
+        << this->getOccupation() << " | "
+        << this->getAddress() << " | "
+        << this->getPhone() << " | " << endl;
 }
