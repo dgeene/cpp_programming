@@ -11,6 +11,7 @@ using std::cin;
 Rolodex rolo;
 void preload();
 void showHelp();
+Card promptNewCard();
 
 int main() {
     cout << "===========Rolodex program===========" << endl;
@@ -42,7 +43,10 @@ int main() {
             card.show(oss);
             cout << oss.str();
         } else if (command == "add") {
-            cout << "add" << endl;
+            Card newCard = promptNewCard();
+            cout << "-added-" << endl;
+            newCard.show(oss);
+            cout << oss.str();
         } else if (command == "remove") {
             Card card = rolo.getCurrentCard();
             cout << "are you sure you want to remove?" << endl;
@@ -59,10 +63,8 @@ int main() {
             string last, first;
             cout << "enter last name: ";
             cin >> last; // TODO check if toLowerr is working here
-            std::transform(last.begin(), last.end(), last.begin(), ::tolower);
             cout << "enter first name: ";
             cin >> first;
-            std::transform(first.begin(), first.end(), first.begin(), ::tolower);
             bool found = rolo.search(last, first);
             if (found) {
                 Card found = rolo.getCurrentCard();
@@ -79,6 +81,28 @@ int main() {
         }
     }
 
+}
+
+/*
+ * Prompts the user for contact input
+ */
+Card promptNewCard() {
+    string last, first, occupation, address, phone;
+    cin.ignore(10000,'\n'); //clear the cin buffer
+
+    cout << "enter first name: ";
+    std::getline(std::cin, first);
+    cout << "enter last name: ";
+    std::getline(std::cin, last);
+    cout << "enter occupation: ";
+    std::getline(std::cin, occupation);
+    cout << "enter address: ";
+    std::getline(std::cin, address);
+    cout << "enter phone: ";
+    std::getline(std::cin, phone);
+    Card newCard = Card(first, last, occupation, address, phone);
+    rolo.add(newCard);
+    return newCard;
 }
 
 void showHelp() {
