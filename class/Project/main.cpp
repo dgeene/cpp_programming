@@ -10,21 +10,23 @@ using std::cin;
 
 Rolodex rolo;
 void preload();
+void showHelp();
 
 int main() {
     cout << "===========Rolodex program===========" << endl;
 
-    std::ostringstream oss; //TODO need to clear after each show()
+    std::ostringstream oss;
     string command;
 
     preload();
 
     // [ List | view | flip | add | remove | search | quit ]
-    cout << "available commands are [ List | view | flip | add | remove | search | quit ]" << endl;
+    cout << "available commands are [ list | view | flip | add | remove | search | help | quit ]" << endl;
     while(true) {
         cout << "Enter a command: ";
-        oss.str(std::string());
-        cin >> command; // TODO toLower()
+        oss.str(std::string()); // clear output buffer after each command
+        cin >> command;
+        std::transform(command.begin(), command.end(), command.begin(), ::tolower);
 
         if (command == "list") {
             cout << "-----Rolodex List-----" << endl;
@@ -54,12 +56,32 @@ int main() {
                 cout << "not removing" << endl;
             }
         } else if (command == "search") {
-            cout << "search" << endl;
+            string last, first;
+            cout << "enter last name: ";
+            cin >> last; // TODO check if toLowerr is working here
+            std::transform(last.begin(), last.end(), last.begin(), ::tolower);
+            cout << "enter first name: ";
+            cin >> first;
+            std::transform(first.begin(), first.end(), first.begin(), ::tolower);
+            bool found = rolo.search(last, first);
+            if (found) {
+                Card found = rolo.getCurrentCard();
+                found.show(oss);
+                cout << oss.str();
+            } else {
+                cout << "contact not found" << endl;
+            }
         } else if (command == "quit" || command == "exit") {
             cout << "quit" << endl;
             break;
+        } else if (command == "help") {
+
         }
     }
+
+}
+
+void showHelp() {
 
 }
 
