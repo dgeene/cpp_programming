@@ -20,9 +20,11 @@ int main() {
     preload();
 
     // [ List | view | flip | add | remove | search | quit ]
+    cout << "available commands are [ List | view | flip | add | remove | search | quit ]" << endl;
     while(true) {
-        cout << "Enter a command for the rolodex [ List | view | flip | add | remove | search | quit ]" << endl;
-        cin >> command;
+        cout << "Enter a command: ";
+        oss.str(std::string());
+        cin >> command; // TODO toLower()
 
         if (command == "list") {
             cout << "-----Rolodex List-----" << endl;
@@ -40,7 +42,17 @@ int main() {
         } else if (command == "add") {
             cout << "add" << endl;
         } else if (command == "remove") {
-            cout << "add" << endl;
+            Card card = rolo.getCurrentCard();
+            cout << "are you sure you want to remove?" << endl;
+            card.show(oss);
+            cout << oss.str();
+            cin >> command;
+            if (command == "yes") {
+                rolo.remove();
+                cout << "removed " << card.getFirstName() << " " << card.getLastName() << endl;
+            } else {
+                cout << "not removing" << endl;
+            }
         } else if (command == "search") {
             cout << "search" << endl;
         } else if (command == "quit" || command == "exit") {
@@ -51,6 +63,10 @@ int main() {
 
 }
 
+/*
+ * Preload the rolodex with starter data.
+ * Need to look at why rolo.add( Card(...) ) doesnt work
+ */
 void preload() {
     cout << "Preloading rolodex with data" << endl;
     Card c1 = Card("Tony", "Hansen", "Writer", "12 E. St. NY, NY 33333 CMU", "555-9999");
