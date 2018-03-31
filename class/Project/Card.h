@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Final Project
+ */
 #ifndef CARD_H
 #define CARD_H
 #include <string>

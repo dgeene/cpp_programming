@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Final Project
+ */
 #ifndef ROLO_H
 #define ROLO_H
 #include <vector>

@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Final Project
+ */
 #include <sstream>
 #include "Rolodex.h"
 #include "Card.h"

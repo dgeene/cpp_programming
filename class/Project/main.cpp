@@ -1,3 +1,8 @@
+/*
+ * David Geene
+ * INFO 2680-061 - C++ Programming
+ * Final Project
+ */
 #include <iostream>
 #include <sstream>
 #include "Rolodex.h"
