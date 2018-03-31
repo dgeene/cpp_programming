@@ -21,6 +21,7 @@ int main() {
 
     preload();
 
+    // The following loop processes command prompts to manipulate the rolodex
     // [ List | view | flip | add | remove | search | quit ]
     cout << "available commands are [ list | view | flip | add | remove | search | help | quit ]" << endl;
     while(true) {
@@ -62,7 +63,7 @@ int main() {
         } else if (command == "search") {
             string last, first;
             cout << "enter last name: ";
-            cin >> last; // TODO check if toLowerr is working here
+            cin >> last;
             cout << "enter first name: ";
             cin >> first;
             bool found = rolo.search(last, first);
@@ -77,7 +78,7 @@ int main() {
             cout << "quit" << endl;
             break;
         } else if (command == "help") {
-
+            showHelp();
         }
     }
 
@@ -106,7 +107,17 @@ Card promptNewCard() {
 }
 
 void showHelp() {
-
+    cout << "****************** help ******************" << endl
+         << "list - List the contents of the Rolodex" << endl
+         << "view - Displays the current card" << endl
+         << "flip - Flips to the next card. Wraps to the beginning if the end is reached" << endl
+         << "add  - Adds a new contact to the Rolodex. Prompts for the following information" << endl
+         << "       First Name | Last Name | Occupation | Address | Phone" << endl
+         << "remove - Removes the current card" << endl
+         << "search - Search for a contact" << endl
+         << "help - Display this help" << endl
+         << "quit - Exit the program" << endl
+         << "******************************************" << endl;
 }
 
 /*
