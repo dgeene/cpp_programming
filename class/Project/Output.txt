@@ -1,0 +1,74 @@
+david@woz:~/cpp-stuff/cpp_programming/class/Project$ ./a.out 
+===========Rolodex program===========
+Preloading rolodex with data
+available commands are [ list | view | flip | add | remove | search | help | quit ]
+Enter a command: list
+-----Rolodex List-----
+First | Last | Occupation | Address | Phone
+Adolf | Coors | Beer Manufacturer | Boston, MA | 555-2337 | 
+Tony | Hansen | Writer | 12 E. St. NY, NY 33333 CMU | 555-9999 | 
+Alonza | Heard | Mechanic | 123 Anyplace Ave Malden, MA | 555-5678 | 
+Alan | Lupine | Vet | 1 Bigelow Ave. Lawrence, MA | 555-7654 | 
+Fred | Milton | Sales | 12 Freedom Way Nashua, NH | 555-9981 | 
+Seymour | Papert | Lego Professor | MIT | 555-1111 | 
+Jewel | Proverb | Landscaper | 34 Washington St. Waltham, MA | 555-3333 | 
+Paul | Revere | Radical Revolutionary | 45 Commonwealth Ave. Boston, MA | 555-1776 | 
+Jen | Reyes | Graphic Artist | 325 Oak rd Wilmington, MA | 555-4950 | 
+Jon | Smyth | Computer Hardware | Computer Services Pittsburgh, PA | 555-1324 | 
+Enter a command: search
+enter last name: Heard
+enter first name: Alonza
+Alonza | Heard | Mechanic | 123 Anyplace Ave Malden, MA | 555-5678 | 
+Enter a command: view
+Alonza | Heard | Mechanic | 123 Anyplace Ave Malden, MA | 555-5678 | 
+Enter a command: flip
+Alan | Lupine | Vet | 1 Bigelow Ave. Lawrence, MA | 555-7654 | 
+Enter a command: search
+enter last name: Smyth
+enter first name: Jon
+Jon | Smyth | Computer Hardware | Computer Services Pittsburgh, PA | 555-1324 | 
+Enter a command: remove
+are you sure you want to remove?
+Jon | Smyth | Computer Hardware | Computer Services Pittsburgh, PA | 555-1324 | 
+yes
+removed Jon Smyth
+Enter a command: view
+Adolf | Coors | Beer Manufacturer | Boston, MA | 555-2337 | 
+Enter a command: add
+enter first name: Matthew 
+enter last name: Williams
+enter occupation: Teacher
+enter address: 69 Main St. Acton, MA
+enter phone: 555-9330
+-added-
+Matthew | Williams | Teacher | 69 Main St. Acton, MA | 555-9330 | 
+Enter a command: list
+-----Rolodex List-----
+First | Last | Occupation | Address | Phone
+Adolf | Coors | Beer Manufacturer | Boston, MA | 555-2337 | 
+Tony | Hansen | Writer | 12 E. St. NY, NY 33333 CMU | 555-9999 | 
+Alonza | Heard | Mechanic | 123 Anyplace Ave Malden, MA | 555-5678 | 
+Alan | Lupine | Vet | 1 Bigelow Ave. Lawrence, MA | 555-7654 | 
+Fred | Milton | Sales | 12 Freedom Way Nashua, NH | 555-9981 | 
+Seymour | Papert | Lego Professor | MIT | 555-1111 | 
+Jewel | Proverb | Landscaper | 34 Washington St. Waltham, MA | 555-3333 | 
+Paul | Revere | Radical Revolutionary | 45 Commonwealth Ave. Boston, MA | 555-1776 | 
+Jen | Reyes | Graphic Artist | 325 Oak rd Wilmington, MA | 555-4950 | 
+Matthew | Williams | Teacher | 69 Main St. Acton, MA | 555-9330 | 
+Enter a command: view
+Matthew | Williams | Teacher | 69 Main St. Acton, MA | 555-9330 | 
+Enter a command: help
+****************** help ******************
+list - List the contents of the Rolodex
+view - Displays the current card
+flip - Flips to the next card. Wraps to the beginning if the end is reached
+add  - Adds a new contact to the Rolodex. Prompts for the following information
+       First Name | Last Name | Occupation | Address | Phone
+remove - Removes the current card
+search - Search for a contact
+help - Display this help
+quit - Exit the program
+******************************************
+Enter a command: quit
+quit
+david@woz:~/cpp-stuff/cpp_programming/class/Project$ 
